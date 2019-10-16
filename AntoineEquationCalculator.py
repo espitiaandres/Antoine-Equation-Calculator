@@ -1,9 +1,11 @@
 import math
 import time
 import sys
+import os
 
 def fileReading():
-    file_name = "Antoine_Coefficients.csv"
+    dir_name = os.path.dirname(__file__)
+    file_name = os.path.join(dir_name, 'Antoine_Coefficients.csv')
     file_reading = open(file_name, "r")
     Formula_list, Compound_list, A_list, B_list, C_list, Tmin_list, Tmax_list = [], [], [], [], [], [], []
     return Formula_list, Compound_list, A_list, B_list, C_list, Tmin_list, Tmax_list, file_reading
